@@ -7,7 +7,7 @@ import {
 import AppProvider from "./contexts/AppProvider";
 import Home from './pages/Home/Home';
 import Products from './pages/Products/Products';
-import Product from './pages/Product/Product';
+import Product from './pages/ProductPage/ProductPage';
 import Payments from './pages/Payments/Payments';
 
 import './App.css';
