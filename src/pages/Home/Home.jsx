@@ -42,6 +42,7 @@ const Home = () => {
           {/* </Link> */}
         </div>
       </div>
+      <h1>Choose your project</h1>
       <div className='productClass'>
         <div className='product'>
         {/* <Link to=""> */}
