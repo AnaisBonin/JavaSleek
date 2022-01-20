@@ -17,6 +17,8 @@ const AppProvider = ({ children }) => {
       : null,
   );
 
+  const [selectedProject, setSelectedProject] = useState();
+
   useEffect(() => {
     setTotal(() => {
       const array = cart.map((article) => article.quantity);
@@ -44,7 +46,9 @@ const AppProvider = ({ children }) => {
     setTotal,
     user,
     setUser,
-  }), []);
+    selectedProject,
+    setSelectedProject,
+  }), [cart, total, user, selectedProject]);
 
   return (
     <AppContext.Provider value={AppStates}>
