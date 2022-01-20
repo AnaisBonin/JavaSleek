@@ -28,7 +28,7 @@ const Cart = () => {
         {total === 0 && (
           <div className="cart-empty">
             <p>Vous n&lsquo;avez aucun article dans votre panier</p>
-            <Link to="/categories">
+            <Link to="/products">
               <button type="button" className="cart-empty-button">
                 Continuez votre sélection
               </button>

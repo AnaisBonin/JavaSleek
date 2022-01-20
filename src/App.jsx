@@ -10,6 +10,7 @@ import Products from './pages/Products/Products';
 import ProductPage from './pages/ProductPage/ProductPage';
 import Payments from './pages/Payments/Payments';
 import Cart from "./pages/Cart/Cart";
+import Project from "./pages/Project/Project";
 
 import './App.css';
 
@@ -22,6 +23,7 @@ const App = () => {
           <Route path="/products" element={<Products />}>
             <Route path=":id" element={<ProductPage />} />
           </Route>
+          <Route path="/project/:id" element={<Project />} />
           <Route path="/payments" element={<Payments />} />
           <Route path="/cart" element={<Cart />} />
         </Routes>
