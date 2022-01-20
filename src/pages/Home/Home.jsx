@@ -4,7 +4,7 @@ import painting from '../../assets/images/painting.jpg'
 import Shelf from '../../assets/images/Shelf.jpg'
 import WoodenFloor from '../../assets/images/WoodenFloor.jpg'
 import kitchen from '../../assets/images/kitchen.jpg'
-import bathroom from '../../assets/images/kitchen.jpg'
+import bathroom from '../../assets/images/bathroom.jpg'
 import carpentry from '../../assets/images/carpentry.jpg'
 import garden from '../../assets/images/garden.jpg'
 // import { Link } from "react-router-dom";
