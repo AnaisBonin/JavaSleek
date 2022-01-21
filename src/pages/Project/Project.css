@@ -16,10 +16,17 @@
 }
 
 .project-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 1rem;
   width: 60vw;
-  height: 300px;
   background-color: var(--blue);
+}
+
+.project-img img {
+  max-width: 600px;
+  max-height: 400px;
 }
 
 .project-head h1 {

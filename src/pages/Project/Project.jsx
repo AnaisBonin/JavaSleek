@@ -7,6 +7,7 @@ import Article from '../../components/Article/Article';
 import Community from '../../components/Community/Community';
 import Steps from '../../components/Steps/Steps';
 import { useApp } from '../../contexts/AppProvider';
+import paint from '../../assets/images/painting.jpg'
 
 import './Project.css';
 
@@ -80,7 +81,9 @@ const Project = () => {
       {project && (
         <>
           <section className="project-head">
-            <div className="project-img"></div>
+            <div className="project-img">
+              <img src={paint} />
+            </div>
             <h1>{project.title}</h1>
             {!isSelected ? (
               <button type="button" onClick={projectClick}>
@@ -99,9 +102,9 @@ const Project = () => {
             )}
           </section>
           <section className="project-products-list">
-            <Article />
-            <Article />
-            <Article />
+            <Article name="pinceau plat" quantity="1" />
+            <Article name="peinture blanche" quantity="5" />
+            <Article name="pinceau rond" quantity="1" />
             <div className="filet-h"></div>
           </section>
           <section className="project-steps-community">

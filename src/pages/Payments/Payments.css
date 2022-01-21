@@ -85,7 +85,8 @@
     align-items: center;
     color: var(--blue);
 }
-img {
+
+.triangle {
     margin-left: auto;
     height: 1em;
     transform: rotate(180deg);

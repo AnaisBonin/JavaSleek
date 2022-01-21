@@ -18,11 +18,11 @@ const Payments = () => {
           </div>
           <div className="commande">
             <p> Détails de la commande</p>
-            <img src={triangle} alt="triangle" />
+            <img src={triangle} className="triangle" />
           </div>
           <div className="promo">
             <p> Entrer un code promo</p>
-            <img src={triangle} alt="triangle" />
+            <img src={triangle} className="triangle" />
           </div>
         </div>
         <div className="container2">
@@ -55,7 +55,7 @@ const Payments = () => {
               <p>3 </p>
             </span>
             <p>Adresse de livraison</p>
-              <img src={triangle} alt="triangle" />
+              <img src={triangle} className="triangle" />
           </div>
         </div>
         <div className="container4">
@@ -64,7 +64,7 @@ const Payments = () => {
               <p>4 </p>
             </span>
             <p>Adresse de facturation</p>
-              <img src={triangle} alt="triangle" />
+              <img src={triangle} className="triangle" />
           </div>
         </div>
         <button type="button" className="payment-boutton" onClick={Alerts}>PAIEMENT</button>        
