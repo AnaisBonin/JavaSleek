@@ -60,6 +60,10 @@
   border: 1px solid var(--turquoise);
 }
 
+.message-product-img img {
+  width: 35px;
+}
+
 .message-product-suggested h5 {
   font-weight: normal;
 }

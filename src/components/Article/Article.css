@@ -14,3 +14,7 @@
   border: 1px solid var(--turquoise);
   background-color: inherit;
 }
+
+.article-img img {
+  width: 35px;
+}

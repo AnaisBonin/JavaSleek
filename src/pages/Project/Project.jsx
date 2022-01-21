@@ -11,86 +11,126 @@ import './Project.css';
 
 const Project = () => {
   const { selectedProject, setSelectedProject } = useApp();
+  const { id: projectId } = useParams();
 
-  const [project, setProject] = useState({
-    id: 1,
-    name: "Project Title"
-  });
+  const [project, setProject] = useState();
+  // const project = {
+  //     id: 29,
+  //     title: "Repeindre son plafond",
+  //     description: "prenez un pinceau et peignez",
+  //     rating: 4,
+  // }
 
   const [isSelected, setIsSelected] = useState(false);
-  const [stepsDisplayed, setStepsDisplayed] = useState(true);
 
-  const { id: projectId } = useParams();
+  const [stepsDisplayed, setStepsDisplayed] = useState(true);
 
   const clickSteps = () => {
     setStepsDisplayed(true);
-  }
-  
+  };
+
   const clickCommunity = () => {
     setStepsDisplayed(false);
-  }
+  };
 
   const projectClick = () => {
     if (!selectedProject) {
-      setSelectedProject({...project})
+      setSelectedProject({ ...project });
     } else {
-      setSelectedProject()
+      setSelectedProject();
     }
   };
 
-  // useEffect(async () => {
-  //   const { data } = await axios.get(
-  //     `${process.env.REACT_APP_API_URL}/projects/${projectId}`,
-  //   );
+  useEffect(async () => {
+    const { data } = await axios.get(
+      `http://localhost:8000/api/projects/${projectId}`,
+    );
+    console.log(data);
+    setProject(data);
 
-  //   setProject(data);
-  // }, [projectId]);
+    if (!data) {
+      setProject({
+        id: 26,
+        title: 'Dormir mieux la nuit',
+        description: 'et si vous changiez votre matelas?',
+        rating: '1',
+      });
+    }
+    console.log(project);
+  }, [projectId]);
 
-  useEffect (() => {
+  useEffect(() => {
     if (!selectedProject) {
       return setIsSelected(false);
     }
 
     if (selectedProject.id === project.id) {
-      setIsSelected(true)
+      setIsSelected(true);
     } else {
-      setIsSelected(false)
+      return setIsSelected(false);
     }
-  }, [project, selectedProject])
+  }, [project, selectedProject]);
+
+  console.log(project);
 
   return (
-    project && (
-      <main className="project-main">
-        <section className="project-head">
-          <div className="project-img"></div>
-          <h1>{project.name}</h1>
-          {
-            !isSelected
-            ? (<button type="button" onClick={projectClick} >Je compose ce projet</button>)
-            : (<button type="button" onClick={projectClick} className='project-selected'>Stop working on this project</button>)
-          }
-          { isSelected && <p>Article déjà possédé ? Cliquez sur la photo du produit !</p>}
-        </section>
-        <section className="project-products-list">
-          <Article />
-          <Article />
-          <Article />
-          <div className="filet-h"></div>
-        </section>
-        <section className='project-steps-community'>
-          <div className="project-sc-buttons">
-            <button 
-              className={stepsDisplayed ? 'steps-button steps-selected' : 'steps-button'} 
-              onClick={clickSteps}>Steps</button>
-            <button className={!stepsDisplayed ? 'community-button community-selected' : 'community-button'} onClick={clickCommunity}>Community</button>
-          </div>
-          <div className="project-sc">
-            {stepsDisplayed && <Steps />}
-            {!stepsDisplayed && <Community />}
-          </div>
-        </section>
-      </main>
-    )
+    <main className="project-main">
+      {project && (
+        <>
+          <section className="project-head">
+            <div className="project-img"></div>
+            <h1>{project.title}</h1>
+            {!isSelected ? (
+              <button type="button" onClick={projectClick}>
+                Je compose ce projet
+              </button>
+            ) : (
+              <button
+                type="button"
+                onClick={projectClick}
+                className="project-selected">
+                Stop working on this project
+              </button>
+            )}
+            {isSelected && (
+              <p>Article déjà possédé ? Cliquez sur la photo du produit !</p>
+            )}
+          </section>
+          <section className="project-products-list">
+            <Article />
+            <Article />
+            <Article />
+            <div className="filet-h"></div>
+          </section>
+          <section className="project-steps-community">
+            <div className="project-sc-buttons">
+              <button
+                className={
+                  stepsDisplayed
+                    ? 'steps-button steps-selected'
+                    : 'steps-button'
+                }
+                onClick={clickSteps}>
+                Steps
+              </button>
+              <button
+                className={
+                  !stepsDisplayed
+                    ? 'community-button community-selected'
+                    : 'community-button'
+                }
+                onClick={clickCommunity}>
+                Community
+              </button>
+            </div>
+            <div className="project-sc">
+              {stepsDisplayed && <Steps />}
+              {!stepsDisplayed && <Community />}
+            </div>
+          </section>
+        </>
+      )}
+    </main>
   );
 };
 
