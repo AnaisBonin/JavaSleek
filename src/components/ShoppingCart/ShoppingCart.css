@@ -1,0 +1,45 @@
+.basket-container {
+  margin: 0.5rem;
+}
+
+.basket-empty{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 55px;
+  height: 55px;
+  padding: 5px;
+  border-radius: 50%;
+  border: 0;
+  background-color: var(--turquoise);
+}
+
+.basket-empty img{
+  max-width: 40px;
+  cursor: pointer;
+}
+
+.basket-filled{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70px;
+  padding: 7px 5px;
+  border-radius: 20px;
+  background-color: var(--turquoise);
+  color: white;
+}
+
+.basket-filled p{
+  font-size: 0.9rem;
+}
+
+.basket-filled button {
+  cursor: pointer;
+  background-color: inherit;
+  border: 0;
+  padding: 0 0.5rem;
+  color: inherit;
+  font-size: 20px;
+}
+
