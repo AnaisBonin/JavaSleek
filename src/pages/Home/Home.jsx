@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useHistory } from "react-router-dom";
+import SearchBar from '../../components/SearchBar/SearchBar.jsx'
 import './Home.css';
 import painting from '../../assets/images/painting.jpg'
 import Shelf from '../../assets/images/Shelf.jpg'
@@ -10,8 +12,21 @@ import garden from '../../assets/images/garden.jpg'
 // import { Link } from "react-router-dom";
 
 const Home = () => {
+  // const history = useHistory();
+
+  const [term, setTerm] = useState("");
+  const handleChange = (event) => setTerm(event.target.value);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // /\d/.test(term)
+      // ? history.push(`/Product/${term}`)
+      // : history.push(`/ProductList/${term}`);
+  };
+
   return <main>
     <div className='recipes-all'>
+      <SearchBar handleChange={handleChange} handleSubmit={handleSubmit} />
       <h1>Choose your daily recipes</h1>
       <div className='daily-recipes'>
         <div className='recipes'>

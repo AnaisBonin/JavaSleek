@@ -1,0 +1,13 @@
+.input-css {
+    width: 70%;
+    border: 2.3px solid var(--turquoise);
+    border-radius: 1em;
+    padding-left:15px;
+}
+
+.button-css{
+    background-color: var(--turquoise);
+    border: 2.3px solid var(--turquoise);
+    border-radius:30%;
+    color:white;
+}
