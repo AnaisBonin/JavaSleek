@@ -1,0 +1,38 @@
+.footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: var(--turquoise);
+    border-top: solid var(--black) 1px;
+    width: 100%;
+    bottom:0;
+    position:fixed;
+}
+
+a.youtube {
+    color: #eb3223;
+}
+  
+a.facebook {
+    color: #4968ad;
+}
+  
+a.twitter {
+    color: #49a1eb;
+}
+  
+a.instagram {
+    color: black;
+}
+  
+a.social {
+    margin-right: 1.5rem;
+}
+
+  
+@media screen and (min-width: 700px) {
+
+    a.social {
+      margin-right: 3.5rem;
+    }
+}

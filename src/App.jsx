@@ -12,6 +12,7 @@ import Payments from './pages/Payments/Payments';
 import Cart from "./pages/Cart/Cart";
 import Project from "./pages/Project/Project";
 import Header from "./components/Header/Header.jsx"
+import Footer from "./components/Footer/Footer.jsx"
 
 import './App.css';
 
@@ -29,6 +30,7 @@ const App = () => {
           <Route path="/payments" element={<Payments />} />
           <Route path="/cart" element={<Cart />} />
         </Routes>
+        <Footer />
       </Router>
     </AppProvider>
   );
