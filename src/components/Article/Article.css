@@ -1,0 +1,16 @@
+.article-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+  margin: 0.5rem 5rem;
+}
+
+.article-img {
+  width: 60px;
+  height: 60px;
+  padding: 0.5rem;
+  border-radius: 15px;
+  border: 1px solid var(--turquoise);
+  background-color: inherit;
+}
