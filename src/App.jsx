@@ -11,6 +11,7 @@ import ProductPage from './pages/ProductPage/ProductPage';
 import Payments from './pages/Payments/Payments';
 import Cart from "./pages/Cart/Cart";
 import Project from "./pages/Project/Project";
+import Header from "./components/Header/Header.jsx"
 
 import './App.css';
 
@@ -18,6 +19,7 @@ const App = () => {
   return (
     <AppProvider>
       <Router>
+        <Header />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products />}>
