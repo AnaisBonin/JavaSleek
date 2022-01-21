@@ -1,6 +1,94 @@
+/* General */
+
+.filet-h {
+  min-width: 75%;
+  height: 1px;
+  margin-top: 2rem;
+  background-color: var(--blue);
+}
+
+/* Project Head */
+
+.project-head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .project-img {
   margin: 1rem;
-  width: 400px;
+  width: 60vw;
   height: 300px;
   background-color: var(--blue);
 }
+
+.project-head h1 {
+  margin: 0.5rem;
+  font-weight: 500;
+  color: var(--turquoise);
+}
+
+.project-head button {
+  margin: 1rem;
+  padding: 0.4rem 1.5rem;
+  border-radius: 25px;
+  border: 1px solid var(--turquoise);
+  background-color: var(--turquoise);
+  color: white;
+}
+
+.project-head .project-selected {
+  background-color: var(--yellow);
+  border-color: var(--yellow);
+  color: white;
+}
+
+.project-head p {
+  font-size: 0.8rem;
+  text-decoration: underline;
+}
+
+/* Product List Section */
+
+.project-products-list, .project-steps-community {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem;
+}
+
+.project-sc-buttons button {
+  margin: 1rem;
+  padding: 0.5rem 1rem;
+  width: 120px;
+  border-radius: 25px;
+  font-size: 1rem;
+}
+
+.steps-button {
+  background-color: inherit;
+  border: 0.5px solid var(--blue);
+  color: var(--blue);
+}
+
+.steps-selected {
+  background-color: var(--blue);
+  border: 0.5px solid var(--blue);
+  color: white;
+}
+
+.community-button {
+  background-color: inherit;
+  color: var(--turquoise);
+  border: 0.5px solid var(--turquoise);
+}
+
+.community-selected {
+  background-color: var(--turquoise);
+  color: white;
+}
+
+.project-sc {
+  width: 80%;
+}
+
