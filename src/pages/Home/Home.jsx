@@ -9,7 +9,7 @@ import kitchen from '../../assets/images/kitchen.jpg'
 import bathroom from '../../assets/images/bathroom.jpg'
 import carpentry from '../../assets/images/carpentry.jpg'
 import garden from '../../assets/images/garden.jpg'
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   // const history = useHistory();
@@ -30,31 +30,31 @@ const Home = () => {
       <h1>Choose your daily recipes</h1>
       <div className='daily-recipes'>
         <div className='recipes'>
-          {/* <Link to=""> */}
+          <Link to="/project/29">
             <img
               className='recipes-img'
               src={painting}
               alt='recipes-img'/>
             <p>Painting</p>
-          {/* </Link> */}
+          </Link>
         </div>
         <div className='recipes'>
-          {/* <Link to=""> */}
+          <Link to="/project/28">
             <img
               className='recipes-img'
               src={Shelf}
               alt='recipes-img'/>
             <p>Shelf</p>
-          {/* </Link> */}
+          </Link>
         </div>
         <div className='recipes'>
-          {/* <Link to=""> */}
+          <Link to="/project/30">
             <img
               className='recipes-img'
               src={WoodenFloor}
               alt='recipes-img'/>
             <p>Wooden Floor</p>
-          {/* </Link> */}
+          </Link>
         </div>
       </div>
       <h1>Choose your project</h1>
