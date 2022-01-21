@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { useHistory } from "react-router-dom";
+// import { useHistory } from "react-router-dom";
+import Header from "../../components/Header/Header.jsx"
 import SearchBar from '../../components/SearchBar/SearchBar.jsx'
 import './Home.css';
 import painting from '../../assets/images/painting.jpg'
@@ -26,6 +27,7 @@ const Home = () => {
 
   return <main>
     <div className='recipes-all'>
+      
       <SearchBar handleChange={handleChange} handleSubmit={handleSubmit} />
       <h1>Choose your daily recipes</h1>
       <div className='daily-recipes'>
