@@ -97,9 +97,9 @@ const Project = () => {
             )}
           </section>
           <section className="project-products-list">
-            <Article />
-            <Article />
-            <Article />
+            <Article name="pinceau plat" quantity="1" />
+            <Article name="peinture blanche" quantity="5" />
+            <Article name="pinceau rond" quantity="1" />
             <div className="filet-h"></div>
           </section>
           <section className="project-steps-community">

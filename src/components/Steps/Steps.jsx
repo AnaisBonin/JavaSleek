@@ -55,7 +55,7 @@ const Steps = () => {
           <Step
             title={step.title}
             description={step.description}
-            order={i}
+            order={i+1}
             steps={step.video}
             key={i}
           />
