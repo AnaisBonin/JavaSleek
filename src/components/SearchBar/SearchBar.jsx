@@ -1,9 +1,23 @@
+import React from "react";
 import './SearchBar.css';
 
-const SearchBar = () => {
+function SearchBar(props) {
+  const { term, handleChange, handleSubmit } = props;
+
   return (
-    <div></div>
+    <div>
+      <form onSubmit={handleSubmit} className="form-css">
+        <input
+          value={term}
+          type="text"
+          placeholder="Rechercher..."
+          onChange={handleChange}
+          className="input-css"
+        />
+        <button className="button-css">Go</button>
+      </form>
+    </div>
   );
-};
+}
 
 export default SearchBar;

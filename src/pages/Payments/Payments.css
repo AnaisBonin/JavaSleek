@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0; 
+}
+.title {
+    margin-top: 70px ;
+    display: flex;
+    justify-content: center;
+    color: var(--blue);
+    font-size: larger;
+    padding: 3rem 1rem;
+}
+.container1 {
+    flex-direction: row;
+    align-items:center;
+    justify-content: center;
+    padding: 10px;
+    margin-top: 25px;
+    border: 2px solid var(--light-blue);
+    border-radius: 10px;
+    padding: 1rem 1rem;
+    margin: 0.5rem 1rem;    
+}
+
+.container2 { 
+    display: flex;   
+    margin-top: 25px;
+    padding: 10px;
+    border: 2px solid var(--light-blue);
+    align-items: flex-start;
+    border-radius: 10px;
+    flex-direction: column;
+    color: var(--blue);
+    margin: 1.5rem 1rem;
+}
+.container3 {
+    padding: 10px;
+    margin-top: 25px;
+    border: 2px solid var(--light-blue);
+    color: var(--blue);
+    border-radius: 10px;
+    margin: 1.5rem 1rem;
+}
+.container4 {
+    padding: 10px;
+    border: 2px solid var(--light-blue);
+    color: var(--blue);
+    border-radius: 10px;
+    margin: 1.5rem 1rem;
+}
+.payment-boutton {
+    padding: 0.5rem 7.8rem;
+    margin: 4rem 2rem;
+    border-radius: 30px;
+    border: 0px;
+    background-color: var(--turquoise);
+    color: white;
+    font-size: 1rem;
+    transition: color 0.2s ease-out;
+}
+.mode-paiement {
+    display: flex;
+    align-items: center;
+    color: var(--light-blue);
+}
+.commande {
+    display: flex;
+    align-items: center;
+}
+.promo {
+    display: flex;
+    align-items: center;
+}
+.livraison {
+    display: flex;
+    align-items: center;
+
+}
+.facturation {
+    display: flex;
+    align-items: center;
+}
+.paiement {
+    display: flex;
+    align-items: center;
+    color: var(--blue);
+}
+img {
+    margin-left: auto;
+    height: 1em;
+    transform: rotate(180deg);
+    align-items: flex-end;
+    color: var(--light-blue);
+}
+
+.un p {
+    background: var(--blue);
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    display: inline-block;
+    color: white;
+    font-weight: bold;
+    line-height: 40px;
+    margin-right: 5px;
+    text-align: center;
+    width: 40px;
+    
+}

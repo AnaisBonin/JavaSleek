@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
+import Header from '../../components/Header/Header.jsx'
 
 import Article from '../../components/Article/Article';
 import Community from '../../components/Community/Community';
@@ -61,6 +62,7 @@ const Project = () => {
 
   useEffect(() => {
     if (!selectedProject) {
+
       return setIsSelected(false);
     }
 

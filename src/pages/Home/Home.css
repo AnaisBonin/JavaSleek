@@ -1,0 +1,62 @@
+@media screen and (min-width: 1024px) {
+    body {
+        margin-left:30vh;
+        margin-right:30vh;
+    }
+
+    .recipes-img {
+        width: 15vh;
+        border-radius:100%; 
+    }
+
+    .product-img {
+        width: 40vh;
+        margin-top:5vh;
+    }
+}
+
+h1 {
+    color: var(--blue);
+    font-size: 1.5rem;
+    margin-top: 3vh;
+}
+
+p {
+    color: var(--black);
+}
+
+.daily-recipes{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+
+}
+
+.recipes {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+
+.recipes-img {
+    width: 10vh;
+    border-radius:100%;
+    margin-top:3vh; 
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    align-items:center;    
+}
+
+.product-img {
+    width: 15vh;
+    margin-top:3vh;
+}
+
+.productClass {
+    display:grid;
+    grid-template-columns : 1fr 1fr;
+}
